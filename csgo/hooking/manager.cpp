@@ -57,22 +57,22 @@ bool c_hooks::init( ) {
 }
 
 bool c_hooks::hook( ) {
-	/*if( !m_directx.hook_method( hook::idx::PRESENT, &hook::Present ) ) {
+	if( !m_directx.hook_method( hook::idx::PRESENT, &hook::Present ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to hook Present. This is fatal." );
 		return false;
-	}*/
+	}
 
 	if( !m_directx.hook_method( hook::idx::RESET, &hook::Reset ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to hook Reset. This is fatal." );
 		return false;
 	}
 
-	if( !m_directx.hook_method( hook::idx::END_SCENE, &hook::EndScene ) ) {
+	/*if( !m_directx.hook_method( hook::idx::END_SCENE, &hook::EndScene ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to hook EndScene. This is fatal." );
 		return false;
-	}
+	}*/
 
-	if( !m_clientmode.hook_method( hook::idx::SHOULD_DRAW_FOG, &hook::ShouldDrawFog ) ) {
+	/*if( !m_clientmode.hook_method( hook::idx::SHOULD_DRAW_FOG, &hook::ShouldDrawFog ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to hook ShouldDrawFog. This is fatal." );
 		return false;
 	}
@@ -145,7 +145,7 @@ bool c_hooks::hook( ) {
 	if( !m_engine.hook_method( hook::idx::IS_HLTV, hook::IsHltv ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to hook IsHltv. This is fatal." );
 		return false;
-	}
+	}*/
 
 	m_hooked_successful = true;
 
@@ -158,7 +158,7 @@ bool c_hooks::release( ) {
 		return false;
 	}
 
-	if( !m_clientmode.unhook_all( ) ) {
+	/*if( !m_clientmode.unhook_all( ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to unhook all functions from m_clientmode. This is fatal." );
 		return false;
 	}
@@ -201,7 +201,7 @@ bool c_hooks::release( ) {
 	if( !m_engine.unhook_all( ) ) {
 		_RPTF0( _CRT_ERROR, "Failed to unhook all functions from m_engine. This is fatal." );
 		return false;
-	}
+	}*/
 
 	return true;
 };

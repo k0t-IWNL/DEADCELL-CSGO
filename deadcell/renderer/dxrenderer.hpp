@@ -1,5 +1,9 @@
 #pragma once
 
+#include "../color/color.hpp"
+
+#define COL2DWORD( x ) ( D3DCOLOR_ARGB( x.alpha, x.red, x.green, x.blue ) )
+
 class c_dx_renderer {
 	// util
 	class size_t {
@@ -22,15 +26,21 @@ class c_dx_renderer {
 		}
 	};
 
-private:
-	LPDIRECT3DDEVICE9 m_device;
-	IDirect3DStateBlock9 *m_state_block;
+	struct vertex_t {
+		float x, y, z, rhw;
+		DWORD color;
+	};
 
-	size_t m_display_size;
+private:
+	LPDIRECT3DDEVICE9 m_device = nullptr;
+	IDirect3DStateBlock9 *m_state_block = nullptr;
+
+	size_t m_display_size = { 0, 0 };
 
 public:
-	explicit c_dx_renderer( LPDIRECT3DDEVICE9 device );
-	~c_dx_renderer( );
+
+	void init( IDirect3DDevice9 *device );
+	void release( );
 
 	void begin( );
 	void end( );
@@ -41,6 +51,9 @@ public:
 	size_t get_viewport_size( ) const;
 	void set_viewport( const D3DVIEWPORT9 &viewport );
 
-	void set_display_size( size_t &size );
 	size_t get_display_size( ) const;
+	void set_display_size( size_t &size );
+
+	void filled_rect( int posx1, int posy1, int posx2, int posy2, nigger::Color color ) const;
 };
+

@@ -39,8 +39,9 @@ using ulong_t = unsigned long;
 
 // directx.
 #include <d3d9.h>
+#include <d3dx9.h>
 
-#include "renderer/renderer.hpp"
+#include "renderer/dxrenderer.hpp"
 
 // renderer.
 #include "oshgui/renderer.hpp"

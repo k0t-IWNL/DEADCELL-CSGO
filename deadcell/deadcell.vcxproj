@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="color\color.hpp" />
     <ClInclude Include="console\console.hpp" />
     <ClInclude Include="hash\hash.hpp" />
     <ClInclude Include="inc.hpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="pe\module\module.hpp" />
     <ClInclude Include="pe\pe.hpp" />
     <ClInclude Include="pe\types.hpp" />
+    <ClInclude Include="renderer\dxrenderer.hpp" />
     <ClInclude Include="util\misc\misc.hpp" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +153,7 @@
     <ClCompile Include="math\math.cpp" />
     <ClCompile Include="oshgui\renderer.cpp" />
     <ClCompile Include="pe\module\module.cpp" />
+    <ClCompile Include="renderer\dxrenderer.cpp" />
     <ClCompile Include="util\misc\misc.cpp" />
     <ClCompile Include="util\pattern\pattern.cpp" />
   </ItemGroup>

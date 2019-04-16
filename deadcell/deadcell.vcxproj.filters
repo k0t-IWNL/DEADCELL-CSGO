@@ -34,6 +34,12 @@
     <Filter Include="deadcell\input">
       <UniqueIdentifier>{d1347303-a56d-404d-9fcf-72db47d97c6e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="deadcell\renderer">
+      <UniqueIdentifier>{49a5c1b7-9e50-4ded-b4f8-13b842a0a9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deadcell\color">
+      <UniqueIdentifier>{3b0f14ee-9bed-4d6b-88b8-ccbb58847fc1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc.hpp">
@@ -69,6 +75,12 @@
     <ClInclude Include="oshgui\font.hpp">
       <Filter>deadcell\oshgui</Filter>
     </ClInclude>
+    <ClInclude Include="color\color.hpp">
+      <Filter>deadcell\color</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer\dxrenderer.hpp">
+      <Filter>deadcell\renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="util\misc\misc.cpp">
@@ -91,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="input\input.cpp">
       <Filter>deadcell\input</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer\dxrenderer.cpp">
+      <Filter>deadcell\renderer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
