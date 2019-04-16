@@ -37,5 +37,10 @@ using ulong_t = unsigned long;
 #include "console/console.hpp"
 #include "input/input.hpp"
 
+// directx.
+#include <d3d9.h>
+
+#include "renderer/renderer.hpp"
+
 // renderer.
 #include "oshgui/renderer.hpp"
